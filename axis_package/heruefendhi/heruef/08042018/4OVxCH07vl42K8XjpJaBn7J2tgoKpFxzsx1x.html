@@ -1,134 +1,102 @@
-
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>KOPIHIDEUNG.STORE</title>
-    <meta name="description" content="KOPIHIDEUNG.STORE">
-
-  <meta name="keywords" content="azis, axis" />
-
-  <meta name="robots" content="index,follow">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KOPIHIDEUNG.S">
+<meta name="author" content="Dey Agustian">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<title>KOPIHIDEUNG.STORE</title>
+<link rel="icon" href="https://raw.githubusercontent.com/warungsiganteng/warungsiganteng.github.io/master/images/wkp.ico" type="image/x-icon">
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 
 <style type="text/css">
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+body {height:100%;margin: 0;padding: 0;font-family: arial;color: white;background-size: 100%;
+-webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;background-color: #49586b;
+    background-image: url(http://mypanel.kopihideung.store/images/bg-color1.jpg);
+}
+a {text-decoration: none;}
+h2,h3,h4,h5,h6 {margin-left: 25px; color: white; text-align: left; font-size: 20px;}
+h1{margin-left: 25px; color: white; font-size: 20px; text-align: left;}
+li,ul {margin: 0;padding: 0;}
+.clear {clear: both;}
+
+.headeratas{margin: 0 auto; position: relative; border: solid #9257af; background-color: #9257af; padding-bottom: 70px; padding-top: 10px;}
+.headeratas img{float: left; margin-left: 20px;}
+.headeratas h1{margin-left: 25px; margin-top: 18px; float: left; display: inline-block; overflow: hidden;}
+
+@media screen and (max-width: 500px) {
+.headeratas h1{font-size: 15px;}
+}
+.kotakselamat{border-radius: 5px;background:#111; padding: 25px; margin-left: 25px; margin-right: 25px;line-height:1.8em}
+.kotakmenu{border: 1px solid #511170; border-radius: 5px;background:#3c0855; padding: 25px; margin-left: 25px; margin-right: 25px;}
+.kotakmenu a{color: #fcff00;}
+.kotakmenu ol{padding:0;margin-left:15px;margin-bottom: 0;}
+.kotakmenu ol li {line-height: 1.8em}
+
+.selectmenu{background-color: #fff; color: black; height: 25px; font-family: Arial;}
+.selectmenu:hover{background-color: #efcdff;}
+
+@media screen and (max-width: 600px) {
+.atur{width: 75%;}
 }
 
-body{
-    background: #e3e3e3;
+@media screen and (min-width: 100px) {
+.atur{width: 100%;}
 }
 
-div.konten{
-    background: #ffffff;
-    width: 325px;
-	min-width:300px;
-    margin: 222px auto 0;
-    border-radius: 5px;
-    min-height: 230px;
-    overflow: hidden;
-	border: 1px solid #bbb;
-}
+.tombolsubmit{background-color: #ed5b34; border: solid #ed5b34; color: white; cursor: pointer;padding:5px 10px; border-radius:5px}
 
-div.kepala{
-    background: #550b67;
-    padding: 10px 22px;
-    height: 90px;
-}
-
-div.kepala h2.judul{
-    color: #fff;
-    font-weight: normal;
-    line-height: 40px;
-    display: inline-block;
-}
-div.kepala .wkp {float:right}
-div.artikel{
-    padding:10px 22px 0;
-    color: #808080;
-}
-
-div.artikel div.grup{
-    margin: 16px 0;
-}
-
-div.artikel div.grup label,
-div.artikel div.grup input{
-    display: block;
-}
-
-div.artikel div.grup label{
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-div.artikel div.grup input[type="text"],
-div.artikel div.grup input[type="password"]{
-    width: 100%;
-    height: 30px;
-    padding: 0 10px;
-    background: #eeeeee;
-    border:1px solid #ccc;
-    color: #808080;
-}
-
-div.artikel div.grup input[type="submit"]{
-    background: #550b67;
-    padding: 10px 80px;
-    margin: 0 auto;
-    border: 1px solid #3f054d;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-}
-
-div.artikel div.grup input[type="submit"]:hover{
-    background: #3f054d;
-}
+.footerbawah{margin: 0 auto; position: relative;background-color: #111; padding-bottom: 5px; padding-top: 5px;bottom:0}
 </style>
-
-
-  </head>
-  <body>
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">TUTORIAL : :</label>
-		    <label for="2">- Login lewat my.axisnet.id</label>
-		    <label for="3">- Jika belum mempunyai password minta password terlebih dahulu di my.axisnet.id</label>
-		    <label for="4">- Tunggu sampai captcha muncul</label>
-		    <label for="5">- Input nomor + password + captcha</label>
-		    <label for="6">- Klik Login/Masuk di my.axisnet.id</label>
-		    <label for="7">- Jika sudah berhasil masuk klik "Tembak" di bawah</label>
-		    <label for="8">- Kuota ini 500MB/1x tembak</label>
-		    <label for="9">- Bisa ditembak sampai maximal 9.25GB</label>
-		    <label for="10">- Jika sudah sampai maximal 9.25GB bisa di stop dan di paketkan lagi</label>
-		    <label for="11">- URL/Link Tembak setiap hari nya akan diperbaharui, jadi setiaphari minta link baru ke admin</label>
-		    <label for="11">- Harga Paket = 0 Rupiah/label>
-		    <label for="13">DILARANG KERAS :</label>
-		    <label for="14">- Menyebarkan URL/Link Tembak</label>
-		    <label for="15">- Menembak nomor orang lain</label>
-		    <label for="16">- Upload screenshot paketan diberanda/grup/komentar dll</label>
-		    <label for="17">- Memberikan Clue paketan kepada orang lain</label>
-		    <label for="18">JIKA KETAHUAN AKAN SAYA KICK,DELETE AKUN, NO REFUND, & BAWEL !!!</label>
-		    <label for="19">Regards, Dey Agustian & Hidayat Azah</label>
-                    <input type="hidden" name="pkgid" value="3110041">
-					<input type="hidden" name="amount" value="3110041">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Tembak">
-                </div>
-            </form>
- </body>
+</head>
+<body>
+<div class="headeratas">
+<a href=""><img src="https://raw.githubusercontent.com/warungsiganteng/warungsiganteng.github.io/master/images/logo-axis-white.png" alt="tembak_axis" title="Tembak AXIS - WKP"><h1 title="Tembak AXIS - WKP">SNIPER V.2</h1></a>
+</div>
+<br>
+<div class="kotakselamat">
+Welcome, Good Luck And Have Fun!
+</div><br>
+<div class="kotakmenu">
+<b>Cara Menggunakan:</b><br>
+<ol>
+<li>Login terlebih dahulu di <a href="https://my.axisnet.id" target="_blank" title="My AXISNET"><b>https://my.axisnet.id</b></a>. Jika belum mempunyai password silahkan daftar/minta password terlebih dahulu.</li>
+<li>Pilih tembak sesuai paket / tersedia.</li>
+<li> Notes : Jika kesusahan login ke <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> harus sabar karena web <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> sering down.</li>
+<li>Untuk trik silahkan baca di <a href="http://buy.kopihideung.store/axis_package/tutorial.html" target="_blank" title="TUTORIAL"><b>SINI</b></a>. Baca dan pahami dengan teliti.</li>
+</ol>
+</div><br>
+<b> </b><br>
+<b> </b><br>
+<div class="kotakmenu">
+<b>Silahkan pilih paket yang ingin Anda tembak!</b><br><br>
+List Paket:<br><br>
+<select name="pilihpaket" id="pilihpaket" class="selectmenu atur">
+<option value="3110041" pkt_id='1'>Paket RP0 500MB 14DAY</option>	
+<option value="3212032" pkt_id='2'>Gaul Unlimited Rp.1700/Hari</option>	
+<option value="3210029" pkt_id='3'>Gaul Unlimited Rp.9900/Minggu</option>
+<option value="3212033" pkt_id='4'>Gaul Unlimited Rp.35.900/Bulan</option>	
+</select><br><br>
+<script>
+ $("#pilihpaket").change(function(){
+ var selectedValue = $(this).val();
+ $("#pkgid").val($(this).find("option:selected").attr("value"))
+ $("#amount").val($(this).find("option:selected").attr("value"))
+ });
+</script>
+<form action="https://my.axisnet.id/home/beli_paket" method="POST">
+<input type="hidden" name="pkgid" id="pkgid" value="3110041">
+<input type="hidden" name="amount" id="amount" value="3110041">
+<button name="tembak" id="tembak" class="tombolsubmit">TEMBAK PAKET</button>
+</form>
+<b> </b><br>
+</div><br><br>
+<footer class="footerbawah"><h2>Dey Agustian ©2018</h2></footer>
+</body>
 </html>
-
-               
