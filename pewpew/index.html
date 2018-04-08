@@ -1,303 +1,76 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>WKP Azis</title>
-    <meta name="description" content="Tembak azis.">
-
-  <meta name="keywords" content="azis, axis" />
-
-  <meta name="robots" content="index,follow">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Tembak Axis WKP">
+<meta name="author" content="Dey Agustian">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<title>Tembak Axis WKP</title>
+<link rel="icon" href="http://berkaskmsp.cf/tembakaxis/favicon.ico" type="image/x-icon">
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
 
 <style type="text/css">
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+body {height:100%;margin: 0;padding: 0;font-family: arial;color: white;background-size: 100%;
+-webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;background-color: #49586b;
+    background-image: url(http://mypanel.kopihideung.store/images/bg-color1.jpg);
+}
+a {text-decoration: none;}
+h2,h3,h4,h5,h6 {margin-left: 25px; color: white; text-align: left; font-size: 20px;}
+h1{margin-left: 25px; color: white; font-size: 20px; text-align: left;}
+li,ul {margin: 0;padding: 0;}
+.clear {clear: both;}
+
+.headeratas{margin: 0 auto; position: relative; border: solid #9257af; background-color: #9257af; padding-bottom: 70px; padding-top: 10px;}
+.headeratas img{float: left; margin-left: 20px;}
+.headeratas h1{margin-left: 25px; margin-top: 18px; float: left; display: inline-block; overflow: hidden;}
+
+@media screen and (max-width: 500px) {
+.headeratas h1{font-size: 15px;}
+}
+.kotakselamat{border-radius: 5px;background:#111; padding: 25px; margin-left: 25px; margin-right: 25px;line-height:1.8em}
+.kotakmenu{border: 1px solid #511170; border-radius: 5px;background:#3c0855; padding: 25px; margin-left: 25px; margin-right: 25px;}
+.kotakmenu a{color: #fcff00;}
+.kotakmenu ol{padding:0;margin-left:15px;margin-bottom: 0;}
+.kotakmenu ol li {line-height: 1.8em}
+
+.selectmenu{background-color: #fff; color: black; height: 25px; font-family: Arial;}
+.selectmenu:hover{background-color: #efcdff;}
+
+@media screen and (max-width: 600px) {
+.atur{width: 75%;}
 }
 
-body{
-    background: #e3e3e3;
-}
-div.outer{margin:50px auto 0;width:91%}
-div.konten{
-    background: #ffffff;
-    width: 18%;
-    margin:5px;
-    border-radius: 5px;
-    min-height: 230px;
-    overflow: hidden;
-	border: 1px solid #bbb;
-	display: inline;
-	float:left;
+@media screen and (min-width: 100px) {
+.atur{width: 100%;}
 }
 
-div.kepala{
-    background: #550b67;
-    padding: 10px 22px;
-    height: 90px;
-}
+.tombolsubmit{background-color: #ed5b34; border: solid #ed5b34; color: white; cursor: pointer;padding:5px 10px; border-radius:5px}
 
-div.kepala h2.judul{
-    color: #fff;
-    font-weight: normal;
-    line-height: 40px;
-    display: inline-block;
-}
-div.kepala .wkp {float:right}
-div.artikel{
-    padding:10px 22px 0;
-    color: #808080;
-}
-
-div.artikel div.grup{
-    margin: 16px 0;
-}
-
-div.artikel div.grup label,
-div.artikel div.grup input{
-    display: block;
-}
-
-div.artikel div.grup label{
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-div.artikel div.grup input[type="text"],
-div.artikel div.grup input[type="password"]{
-    width: 100%;
-    height: 30px;
-    padding: 0 10px;
-    background: #eeeeee;
-    border:1px solid #ccc;
-    color: #808080;
-}
-
-div.artikel div.grup input[type="submit"]{
-    background: #550b67;
-    padding: 10px 50px;
-    margin: 0 auto;
-    border: 1px solid #3f054d;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-}
-
-div.artikel div.grup input[type="submit"]:hover{
-    background: #3f054d;
-}
-	@media screen and (max-width: 640px) {
-div.outer{margin:10px auto 0;width:100%}
-div.konten{
-    width: 30%;
-}
-}
-@media screen and (max-width: 360px) {
-div.outer{margin:10px auto 0;width:100%}
-div.konten{
-    width: 95%;
-}
-}
+.footerbawah{margin: 0 auto; position: relative;background-color: #111; padding-bottom: 5px; padding-top: 5px;bottom:0}
 </style>
-
-
-  </head>
-  <body>
-  <div class="outer">
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">RP0 1GB (BISA BERKALI-KALI TUNGGU 2 MENIT)</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
+</head>
+<body>
+<div class="headeratas">
+<a href=""><img src="http://berkaskmsp.cf/tembakaxis/assets/images/logo-axis-white.png" alt="tembak_axis" title="Tembak AXIS - WKP"><h1 title="Tembak AXIS - WKP">Tembak AXIS - WKP</h1></a>
 </div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-
-  <div class="konten">
-        <div class="kepala">
-            <h2 class="judul"><img src="https://2.bp.blogspot.com/-gOnRsw5hDvU/WsYd_rkp0kI/AAAAAAAAAC8/OBa2VRDlI78RC2hsp4jR14mlKlteZ1SIgCLcBGAs/s1600/logo-axis-white.png"/></h2>
-			<h2 class="wkp"><img src="https://2.bp.blogspot.com/-H-wje3dByNQ/WsYd_tQGHLI/AAAAAAAAAC4/b4Fj4zU9YBMGXGmUi9fn1NPYchg-An6JACLcBGAs/s1600/wkp.png"/></h2>
-        </div>
-        <div class="artikel">
-            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
-                <div class="grup">
-                    <label for="email">COMINGSOON!</label>
-                    <input type="hidden" name="pkgid" value="11111111">
-					<input type="password" name="amount" value="1111111">
-                </div>
-                <div class="grup">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-		</div>
-</div>
-</div>
- </body>
+<br>
+<div class="kotakselamat">
+Selamat Datang di Tembak Paket AXIS 2018
+</div><br>
+<div class="kotakmenu">
+<b>Cara Menggunakan:</b><br>
+<ol>
+<li>Login terlebih dahulu di <a href="https://my.axisnet.id" target="_blank" title="My AXISNET"><b>https://my.axisnet.id</b></a>. Jika belum mempunyai password silahkan daftar/minta password terlebih dahulu.</li>
+<li>Pilih tembak sesuai paket / tersedia</li>
+<li> Notes : Jika kesusahan login ke <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> harus sabar karena web <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> sering down.</li>
+</ol>
+</div><br><br>
+<footer class="footerbawah"><h2>WKP 2018</h2></footer>
+</body>
 </html>
-
-               
