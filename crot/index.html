@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KOPIHIDEUNG.S">
+<meta name="author" content="Dey Agustian">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<title>KOPIHIDEUNG.STORE</title>
+<link rel="icon" href="https://raw.githubusercontent.com/warungsiganteng/warungsiganteng.github.io/master/images/wkp.ico" type="image/x-icon">
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+
+<style type="text/css">
+body {height:100%;margin: 0;padding: 0;font-family: arial;color: white;background-size: 100%;
+-webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;background-color: #49586b;
+    background-image: url(http://mypanel.kopihideung.store/images/bg-color1.jpg);
+}
+a {text-decoration: none;}
+h2,h3,h4,h5,h6 {margin-left: 25px; color: white; text-align: left; font-size: 20px;}
+h1{margin-left: 25px; color: white; font-size: 20px; text-align: left;}
+li,ul {margin: 0;padding: 0;}
+.clear {clear: both;}
+
+.headeratas{margin: 0 auto; position: relative; border: solid #9257af; background-color: #9257af; padding-bottom: 70px; padding-top: 10px;}
+.headeratas img{float: left; margin-left: 20px;}
+.headeratas h1{margin-left: 25px; margin-top: 18px; float: left; display: inline-block; overflow: hidden;}
+
+@media screen and (max-width: 500px) {
+.headeratas h1{font-size: 15px;}
+}
+.kotakselamat{border-radius: 5px;background:#111; padding: 25px; margin-left: 25px; margin-right: 25px;line-height:1.8em}
+.kotakmenu{border: 1px solid #511170; border-radius: 5px;background:#3c0855; padding: 25px; margin-left: 25px; margin-right: 25px;}
+.kotakmenu a{color: #fcff00;}
+.kotakmenu ol{padding:0;margin-left:15px;margin-bottom: 0;}
+.kotakmenu ol li {line-height: 1.8em}
+
+.selectmenu{background-color: #fff; color: black; height: 25px; font-family: Arial;}
+.selectmenu:hover{background-color: #efcdff;}
+
+@media screen and (max-width: 600px) {
+.atur{width: 75%;}
+}
+
+@media screen and (min-width: 100px) {
+.atur{width: 100%;}
+}
+
+.tombolsubmit{background-color: #ed5b34; border: solid #ed5b34; color: white; cursor: pointer;padding:5px 10px; border-radius:5px}
+
+.footerbawah{margin: 0 auto; position: relative;background-color: #111; padding-bottom: 5px; padding-top: 5px;bottom:0}
+</style>
+</head>
+<body>
+<div class="headeratas">
+<a href=""><img src="https://raw.githubusercontent.com/warungsiganteng/warungsiganteng.github.io/master/images/logo-axis-white.png" alt="tembak_axis" title="Tembak AXIS - WKP"><h1 title="Tembak AXIS - WKP">SNIPER V.3</h1></a>
+</div>
+<br>
+<div class="kotakselamat">
+Welcome, Good Luck And Have Fun!
+</div><br>
+<div class="kotakmenu">
+<b>Cara Menggunakan:</b><br>
+<ol>
+<li>Login terlebih dahulu di <a href="https://my.axisnet.id" target="_blank" title="My AXISNET"><b>https://my.axisnet.id</b></a>. Jika belum mempunyai password silahkan daftar/minta password terlebih dahulu.</li>
+<li>Pilih tembak sesuai paket / tersedia.</li>
+<li> Notes : Jika kesusahan login ke <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> harus sabar karena web <a href="https://my.axisnet.id" target="_blank" title="My AXISNET">http://my.axisnet.id </a> sering down.</li>
+<li>Untuk trik silahkan baca di <a href="http://buy.kopihideung.store/axis_package/tutorial.html" target="_blank" title="TUTORIAL"><b>SINI</b></a>. Baca dan pahami dengan teliti.</li>
+<li>Dilarang keras : membagikan link, pamer atau screenshot di grup-grup, menembak nomor orang lain, dan memberikan trik kepada orang lain.</li>
+<li>Jika ada yang melanggar aturan di atas mohon maaf jika saya keluarkan jurus tendangan maut !</li>
+</ol>
+</div><br>
+<b> </b><br>
+<div class="kotakmenu">
+<b>Silahkan pilih paket yang ingin Anda tembak!</b><br><br>
+List Paket:<br><br>
+<select name="pilihpaket" id="pilihpaket" class="selectmenu atur">
+<option value="3212255" pkt_id='1'>Paket RP1 12GB 5DAY *REBORN</option>	
+<option value="3212032" pkt_id='2'>Gaul Unlimited 1700IDR/DAY</option>	
+<option value="3210029" pkt_id='3'>Gaul Unlimited 9900IDR/WEEK</option>
+<option value="3212033" pkt_id='4'>Gaul Unlimited 35.900IDR/MONTH</option>	
+</select><br><br>
+<script>
+ $("#pilihpaket").change(function(){
+ var selectedValue = $(this).val();
+ $("#pkgid").val($(this).find("option:selected").attr("value"))
+ $("#amount").val($(this).find("option:selected").attr("value"))
+ });
+</script>
+<form action="https://my.axisnet.id/home/beli_paket" method="POST">
+<input type="hidden" name="pkgid" id="pkgid" value="3212255">
+<input type="hidden" name="amount" id="amount" value="3212255">
+<button name="tembak" id="tembak" class="tombolsubmit">TEMBAK PAKET</button>
+<b> </b><br>
+<b>Manual ID :</b><br><br>
+        <div class="artikel">
+            <form action="https://my.axisnet.id/home/beli_paket" method="POST">
+                <div class="grup">
+                    <label for="email">Paket ID</label>
+                    <input type="text" name="pkgid" placeholder="Masukan ID">
+					<input type="hidden" name="amount" value="3212255">
+                </div>
+                <div class="grup">
+                    <input type="submit" value="TEMBAK PAKET">
+                </div>
+</form>
+<b> </b><br>
+</div><br><br>
+<footer class="footerbawah"><h2>Dey Agustian ©2018</h2></footer>
+</body>
+</html>
