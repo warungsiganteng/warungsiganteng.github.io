@@ -1,0 +1,41 @@
+body {margin: 0;padding: 0;font-family: arial;background-color: white; background-size: 100%;
+-webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;}
+a {text-decoration: none;}
+h2,h3,h4,h5,h6 {margin-left: 25px; color: white; text-align: left; font-size: 20px;}
+h1{margin-left: 25px; color: white; font-size: 20px; text-align: left;}
+li,ul {margin: 0;padding: 0;}
+.clear {clear: both;}
+::placeholder{color: white;}
+
+.headeratas{margin: 0 auto; position: relative; border: solid #002AFF; background-color: #002AFF; padding-bottom: 70px; padding-top: 10px;}
+.headeratas img{float: left; margin-left: 20px;}
+.headeratas h1{margin-left: 25px; margin-top: 18px; float: left; display: inline-block; overflow: hidden;}
+
+@media screen and (max-width: 500px) {
+.headeratas h1{font-size: 15px;}
+}
+
+.kotakmenu{border: dashed #5A5A5A; padding: 25px; margin-left: 25px; margin-right: 25px;}
+.kotakmenu a{color: #002AFF;}
+
+.selectmenu{background-color: #25CF25; color: white; height: 25px; font-family: Arial;}
+.selectmenu:hover{background-color: #25CF50;}
+
+@media screen and (max-width: 600px) {
+.atur{width: 75%;}
+}
+
+@media screen and (min-width: 100px) {
+.atur{width: 100%;}
+}
+
+.notif1{color: red; font-size: 12px;}
+.notif2{color: blue; font-size: 12px;}
+.notif2 a:hover{color: #007FFF; transition: 0.5s;}
+
+.tombolsubmit{background-color: #002AFF; border: solid #002AFF; color: white; cursor: pointer;}
+
+.footerbawah{margin: 0 auto; position: relative; border: solid #002AFF; background-color: #002AFF; padding-bottom: 5px; padding-top: 5px;}
