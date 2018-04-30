@@ -1,0 +1,75 @@
+#!/bin/bash
+clear
+echo "######################################"
+echo -e "            \e[32;1mMolosin ajis\e[0m"
+echo "######################################"
+echo
+echo "Masukkan Cookie (axisnet=)"
+read kuki
+echo
+echo "Log in.."
+cek=$(curl -# -s -H "Cookie: $kuki" -s --cookie-jar data.cookie 'https://my.axisnet.id' -H 'Origin: https://my.axisnet.id' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Referer: https://my.axisnet.id/' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive')
+echo
+echo "Refreshing New Service ID.."
+newid=$(curl -# -s https://my.axisnet.id//home/package --cookie data.cookie -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36')
+idgaulminggu=$(echo $newid|awk -F "FUP 200MB di jaringan 2G/3G/4G" '{print $2}'|awk -F 'pkgid="' '{print $2}'|awk -F '"' '{print $1}')
+idgaulbulan=$(echo $newid|awk -F "Gaul Bulanan FUP 1.5GB selama 30hari" '{print $2}'|awk -F 'pkgid="' '{print $2}'|awk -F '"' '{print $1}')
+idbronet=$(echo $newid|awk -F "Nikmati 25MB di jam 00-06 & 25MB di jam 00-23.59 hanya Rp1.700" '{print $3}'|awk -F 'pkgid="' '{print $2}'|awk -F '"' '{print $1}')
+idgaul=$(echo $newid|awk -F "FUP 30MB di Jaringan 2G/3G/4G" '{print $2}'|awk -F 'pkgid="' '{print $2}'|awk -F '"' '{print $1}')
+if [ -f $idgaul ]; then
+echo
+echo "Kesalahan Refreshing ID!"
+echo "Exiting.."
+echo
+exit
+fi
+balek=1
+while [ $balek -eq 1 ]; do
+echo "ID: (options)"
+echo -e " \e[32;1m1\e[0m.gaul harian: $idgaul"
+echo -e " \e[32;1m2\e[0m.gaul mingguan: $idgaulminggu"
+echo -e " \e[32;1m3\e[0m.gaul bulanan: $idgaulbulan"
+echo "ID bronet: $idbronet"
+echo
+echo "Pilih Nomor sesuai Paket:"
+read no
+echo
+balek=0
+sidg=$(cat gaul.txt|awk 'NR==4') && sleep 1
+if [ $no -eq 1 ]; then
+sed -i 's,'"$sidg"','"$idgaul"',' "gaul.txt"
+echo "gaul harian dipilih !"
+elif [ $no -eq 2 ]; then
+sed -i 's,'"$sidg"','"$idgaulminggu"',' "gaul.txt"
+echo "gaul mingguan dipilih !"
+elif [ $no -eq 3 ]; then
+sed -i 's,'"$sidg"','"$idgaulbulan"',' "gaul.txt"
+echo "gaul bulanan dipilih !"
+else clear && balek=1
+fi
+done
+balek=1
+while [ $balek -eq 1 ]; do
+echo -e "Perpanjangan Atau Tabrak? (\e[32;1mp\e[0m/\e[32;1mt\e[0m)"
+read pt
+echo
+balek=0
+if [ $pt = "p" ]; then
+echo "Memperpanjang Paket..."
+echo
+sleep 2
+gaul=$(curl -# 'https://my.axisnet.id/home/beli_paket' --cookie data.cookie -H 'Origin: https://my.axisnet.id' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryiZUFUJ9m4bLxTQbW' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Referer: https://my.axisnet.id/' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive' --data-binary @gaul.txt)
+echo $gaul
+elif [ $pt = "t" ]; then
+sidb=$(cat bronet.txt|awk 'NR==4') && sleep 1
+sed -i 's,'"$sidb"','"$idbronet"',' "bronet.txt"
+echo "Tabrak Paket..."
+sleep 3
+gaul=$(sleep 0.1| screen -d -m curl -# 'https://my.axisnet.id/home/beli_paket' --cookie data.cookie -H 'Origin: https://my.axisnet.id' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryiZUFUJ9m4bLxTQbW' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Referer: https://my.axisnet.id/' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive' --data-binary @gaul.txt)
+bronet=$(screen -d -m curl -# 'https://my.axisnet.id/home/beli_paket' --cookie data.cookie -H 'Origin: https://my.axisnet.id' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryiZUFUJ9m4bLxTQbW' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Referer: https://my.axisnet.id/' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive' --data-binary @bronet.txt)
+else clear && balek=1
+fi
+done
+echo
+echo "Selesai."
+echo
